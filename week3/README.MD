@@ -1,3 +1,13 @@
+# Dockerfile 最佳实践
+
+WORKDIR: 指的是容器内目录
+
+
+https://blog.51cto.com/lizhenliang/2363565
+1. 减少镜像层
+2. 优化镜像大小：清理无用数据
+3. 减少网络传输时间
+4. 多阶段进行镜像构建
 
 https://zhuanlan.zhihu.com/p/102450025
 ```dockerfile
@@ -24,3 +34,7 @@ RUN command5 && command6 ...
 ENTRYPOINT ["/entry.app"]  # 指定容器启动时默认执行的命令
 CMD ["--options"] # 指定容器启动时默认命令的默认参数
 ```
+
+multi-stage build
+https://docs.docker.com/develop/develop-images/multistage-build/
+https://blog.alexellis.io/mutli-stage-docker-builds/
