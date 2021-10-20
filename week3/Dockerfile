@@ -8,5 +8,7 @@ FROM ubuntu
 WORKDIR /app
 COPY --from=builder /httpserver/bin/ ./bin
 
+EXPOSE 8090
+
 ENTRYPOINT ["./bin/amd64/httpserver"]
 
